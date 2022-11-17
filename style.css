@@ -19,8 +19,8 @@
             transform: translateY(0);
   }
   100% {
-    -webkit-transform: translateY(130%);
-            transform: translateY(130%);
+    -webkit-transform: translateY(140%);
+            transform: translateY(140%);
   }
 }
 
