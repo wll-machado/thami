@@ -1,0 +1,234 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Alex Brush', cursive;
+}
+
+/* mudança de envelope */
+.slide-bottom {
+	-webkit-animation: slide-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes slide-bottom {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(150%);
+            transform: translateY(150%);
+  }
+}
+
+.slide-top {
+	-webkit-animation: slide-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-185%);
+            transform: translateY(-185%);
+  }
+}
+/*----------------------------------------------------------------------------------------------------*/
+/* shake animation */
+.rotate-center {
+	-webkit-animation: rotate-center 1.5s ease-in-out infinite alternate both;
+	        animation: rotate-center 1.5s ease-in-out infinite alternate both;
+}
+
+
+
+@keyframes rotate-center {
+    0% {
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+    }
+    20% {
+      -webkit-transform: rotate(-2deg);
+              transform: rotate(-2deg);
+    }
+    40% {
+      -webkit-transform: rotate(2deg);
+              transform: rotate(2deg);
+    }
+    60% {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+  }
+/*-----------------------------------------------------------------------------------------------------*/
+
+body {
+    width: 100vw;
+    overflow: hidden;
+}
+
+
+.container{
+  
+  background-image: url(assets/raining\ hearts.gif);
+  background-size: cover ;
+ 
+  width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    mix-blend-mode: overlay;
+}
+
+.invite {
+  background-color: rgba(248, 36, 100, 0.541);
+    width: 100vw;
+    height: 100vh;
+    z-index: 3;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.group {
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+.invite-text {
+  font-size: 2.8rem;
+  position: absolute;
+  align-self: flex-start;
+  z-index: 4;
+  
+}
+.invite-img {
+    width: 55%;
+    height: 40%;
+}
+
+.question {
+  width: 85%;
+  height: 70vh;
+}
+
+.question-text {
+  font-size: 1.5rem;
+  position: absolute;
+  align-self: flex-start;
+  z-index: 4;
+  padding-top: 12%;
+  width: 75%;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-weight: bolder;
+  text-shadow: -1px -1px 1px rgb(255, 255, 255), 1px 1px 5px rgb(255, 255, 255);
+  font-family: 'Dancing Script';
+}
+
+.group2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -100%;
+    z-index: 10;
+}
+
+.options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 19;
+  position: absolute;
+  bottom: -40%;
+  width: 90%;
+  height: 22%;
+  background-color: #f4b2b4;
+
+  border: 10px solid #fe0100;
+  border-radius: 2px;
+}
+
+.wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40%;
+  width: 100%;
+} 
+
+.wrapper h2{
+  font-size: 2rem;
+}
+
+.wrapper label {
+  font-size: 3rem;
+  margin-left: 5px;
+  margin-right: 20px;
+  color: green;
+}
+.options div:nth-child(2){
+  height: 60%;
+  
+}
+.options div:nth-child(2) label:nth-child(4){
+  font-size: 1rem;
+  color: red;
+}
+
+.wrong {
+  position: absolute;
+  top: -400%;
+  z-index: 20;
+  overflow: hidden;
+  border-radius: 20px;
+  width: 80vw;
+  display: none;
+}
+
+.wrong img {
+  width: 80vw;
+  height: 40vh;
+}
+
+.wrong p {
+  background-color: aliceblue;
+  text-align: center;
+  font-size: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.accept {
+  font-family: sans-serif;
+  background-color: rgba(135, 204, 32, 0.884);
+  border-radius: 5px;
+  padding: 4px;
+  border: none;
+  color: white;
+  position: absolute;
+  top: 85%;
+  display: none;
+  width: 4rem;
+}
+
+.thx {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 50;
+  display: none;
+}
